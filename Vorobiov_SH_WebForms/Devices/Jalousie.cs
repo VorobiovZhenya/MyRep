@@ -12,6 +12,7 @@
         public override string Info()
         {
             return this.GetName() + "; состояние: " + JalMode(this.GetState());
+            /////////////////////////////
         }
     }
 }
