@@ -69,17 +69,17 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract Classes\ClimatDevice.cs" />
-    <Compile Include="Abstract Classes\Device.cs" />
-    <Compile Include="Devices\Conditioner.cs" />
-    <Compile Include="Devices\HeatingSystem.cs" />
-    <Compile Include="Devices\Jalousie.cs" />
-    <Compile Include="Devices\Lighting.cs" />
-    <Compile Include="Devices\Sauna.cs" />
-    <Compile Include="Devices\SecurityAlarm.cs" />
-    <Compile Include="Enums\adjustment.cs" />
-    <Compile Include="Interfaces\ILuminous.cs" />
-    <Compile Include="Interfaces\ITimer.cs" />
+    <Compile Include="App_Code\Model\Abstract Classes\ClimatDevice.cs" />
+    <Compile Include="App_Code\Model\Abstract Classes\Device.cs" />
+    <Compile Include="App_Code\Model\Devices\Conditioner.cs" />
+    <Compile Include="App_Code\Model\Devices\HeatingSystem.cs" />
+    <Compile Include="App_Code\Model\Devices\Jalousie.cs" />
+    <Compile Include="App_Code\Model\Devices\Lighting.cs" />
+    <Compile Include="App_Code\Model\Devices\Sauna.cs" />
+    <Compile Include="App_Code\Model\Devices\SecurityAlarm.cs" />
+    <Compile Include="App_Code\Model\Enums\adjustment.cs" />
+    <Compile Include="App_Code\Model\Interfaces\ILuminous.cs" />
+    <Compile Include="App_Code\Model\Interfaces\ITimer.cs" />
     <Compile Include="Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -87,10 +87,10 @@
     <Compile Include="Main.aspx.designer.cs">
       <DependentUpon>Main.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Main\Program.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

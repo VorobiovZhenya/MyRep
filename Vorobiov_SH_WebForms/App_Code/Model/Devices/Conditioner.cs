@@ -1,4 +1,4 @@
-﻿namespace DZ_2
+﻿namespace SmartHome
 {
     public class Conditioner : ClimatDevice
     {

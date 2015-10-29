@@ -1,4 +1,4 @@
-﻿namespace DZ_2
+﻿namespace SmartHome
 {
     public class Jalousie : Device
     {
@@ -11,8 +11,7 @@
         }
         public override string Info()
         {
-            return this.GetName() + "; состояние: " + JalMode(this.GetState());
-            /////////////////////////////
+            return this.GetName() + "; состояние: " + JalMode(this.GetState());            
         }
     }
 }

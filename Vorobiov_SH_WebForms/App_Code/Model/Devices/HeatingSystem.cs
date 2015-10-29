@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-namespace DZ_2
+namespace SmartHome
 {
     public class HeatingSystem : ClimatDevice, ITimer
     {        

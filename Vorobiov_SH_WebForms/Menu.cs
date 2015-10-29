@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DZ_2
+namespace SmartHome
 {
     public class Menu
     {
