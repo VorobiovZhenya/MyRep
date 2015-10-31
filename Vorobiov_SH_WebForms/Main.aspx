@@ -13,7 +13,21 @@
     <form id="form1" runat="server">
         <div style="height: 403px">
 
-        </div>        
+            <asp:Button ID="ClimatDevicesButton" runat="server" Height="29px" Text="Climat devices" Width="157px"  />
+            <br />
+            <br />
+            <asp:Button ID="LightingButton" runat="server" Height="29px" Text="Lighting" Width="157px" />
+            <br />
+            <br />
+            <asp:Button ID="WindowsButton" runat="server" Height="29px" Text="Windows" Width="157px" />
+            <br />
+            <br />
+            <asp:Button ID="SaunaButton" runat="server" Height="29px" Text="Sauna" Width="157px" />
+            <br />
+            <br />
+            <asp:Button ID="SecurityButton" runat="server" Height="29px" Text="Security" Width="157px" />
+
+        </div>                
     </form>
 </body>
 </html>
