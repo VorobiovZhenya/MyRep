@@ -65,6 +65,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\bootstrap_2.css" />
+    <Content Include="CSS\MyCSS.css" />
     <Content Include="Global.asax" />
     <Content Include="Main.aspx" />
     <Content Include="Web.config" />
