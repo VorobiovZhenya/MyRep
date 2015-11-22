@@ -84,7 +84,7 @@ namespace SmartHome
                 var typeChecker = from type in types where (type.Key.ToLower() == commands[1].ToLower()) select type;       // проверка существования типа устройства
                 if (commands[0].ToLower() == "exit")
                 {
-                    return;
+                   return;
                 }
                 if (commands.Length != 2)
                 {
