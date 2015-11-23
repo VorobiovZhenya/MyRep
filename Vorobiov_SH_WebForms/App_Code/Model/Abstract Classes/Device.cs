@@ -1,5 +1,5 @@
 ﻿namespace SmartHome
-{
+{    
     public abstract class Device 
     {
         //private string deviceName;

@@ -17,13 +17,14 @@ namespace Vorobiov_SH_WebForms
 
             if (IsPostBack)
             {
-                devices = new List<Device>();
-                devices.Add(new SecurityAlarm("SA", false, false, false));
-                devices.Add(new Lighting("lamp", false, Adjustment.medium));
-                devices.Add(new Conditioner("Cond", false, Adjustment.medium, false));
-                devices.Add(new HeatingSystem("Batareya", false, Adjustment.medium));
-                devices.Add(new Jalousie("Jalousie", false));
-                devices.Add(new Sauna("Sauna", false, Adjustment.low, Adjustment.medium));
+                //devices = new List<Device>();
+                //devices.Add(new SecurityAlarm("SA", false, false, false));
+                //devices.Add(new Lighting("lamp", false, Adjustment.medium));
+                //devices.Add(new Conditioner("Cond", false, Adjustment.medium, false));
+                //devices.Add(new Conditioner("Conder", true, Adjustment.medium, false)); 
+                //devices.Add(new HeatingSystem("Batareya", false, Adjustment.medium));
+                //devices.Add(new Jalousie("Jalousie", false));
+                //devices.Add(new Sauna("Sauna", false, Adjustment.low, Adjustment.medium));
                 ClimatDevicesButton.Click += On_Click;
                 LightingButton.Click += On_Click;
                 WindowsButton.Click += On_Click;
@@ -36,14 +37,17 @@ namespace Vorobiov_SH_WebForms
                 devices.Add(new SecurityAlarm("SA", false, false, false));
                 devices.Add(new Lighting("lamp", false, Adjustment.medium));
                 devices.Add(new Conditioner("Cond", false, Adjustment.medium, false));
+                devices.Add(new Conditioner("Conder", true, Adjustment.medium, false));
                 devices.Add(new HeatingSystem("Batareya", false, Adjustment.medium));
                 devices.Add(new Jalousie("Jalousie", false));
                 devices.Add(new Sauna("Sauna", false, Adjustment.low, Adjustment.medium));
+                Session["Dvcs"] = devices; 
             }
         }
 
         protected void On_Click(object sender, EventArgs e)
         {
+            List<Device> devices = (List<Device>)Session["Dvcs"];
             var groupDev = (devices.GroupBy(t => t.GetType().Name)).OrderBy(t => t.Key);  // Группировка и упорядочивание по типу устройства
             switch (((Button)sender).ID)
             {
@@ -63,6 +67,7 @@ namespace Vorobiov_SH_WebForms
                             i++;
                         }
                     }
+                    Session["Dvcs"] = devices;
                     break;
                 case "LightingButoon":
 
