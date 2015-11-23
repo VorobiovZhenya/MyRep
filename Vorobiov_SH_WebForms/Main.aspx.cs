@@ -50,14 +50,18 @@ namespace Vorobiov_SH_WebForms
                 case "ClimatDevicesButton":
                     var typeSelector = from type in groupDev where ((type.Key == "Conditioner") || (type.Key == "HeatingSystem")) select type;
                     int i = 0;
-                    Label [] labels = new Label[typeSelector.Count()];
-                    foreach (var selectedDev in typeSelector)
-                    {                    
-                    labels[i] = new Label();
-                    body_content.Controls.Add(labels[i]);
-                    labels[i].Text = (selectedDev.Key + " : " + selectedDev.ToString()) + "\n";
-                    body_content.Controls.Add(new LiteralControl("<br />"));
-                    i++;                    
+                    Label [] labels = new Label[devices.Count()];
+                    foreach (var selectedTypes in typeSelector)
+                    {
+
+                        foreach (var selectedDev in selectedTypes)
+                        {
+                            labels[i] = new Label();
+                            body_content.Controls.Add(labels[i]);
+                            labels[i].Text = (selectedTypes.Key + " : " + ((Device)selectedDev).Info()) + "\n";
+                            body_content.Controls.Add(new LiteralControl("<br />"));
+                            i++;
+                        }
                     }
                     break;
                 case "LightingButoon":
